@@ -1,0 +1,44 @@
+{
+  "name": "dna",
+  "description": "",
+  "version": "1.0.0",
+  "main": ".eslintrc.js",
+  "scripts": {
+    "dev": "nodemon app.js",
+    "test": "NODE_ENV=testing jest",
+    "start-local-mongo": "mkdir dbStorage;  mongod --dbpath ./dbStorage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/twilczek/dna.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/twilczek/dna/issues"
+  },
+  "homepage": "https://github.com/twilczek/dna#readme",
+  "devDependencies": {
+    "eslint": "^7.26.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jest": "^24.3.6",
+    "eslint-plugin-prettier": "^3.4.0",
+    "jest": "^26.6.3",
+    "mongodb-memory-server": "^6.9.6",
+    "nodemon": "^2.0.7",
+    "prettier": "2.3.0",
+    "supertest": "^6.1.3",
+    "testdouble": "^3.16.1",
+    "testdouble-jest": "^2.0.0"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "lodash.omit": "^4.5.0",
+    "mongodb": "^3.6.6"
+  }
+}
