@@ -1,9 +1,11 @@
+const { BaseController } = require("./BaseController");
 const { verifyCreateUserBody } = require("../utils/verifyCreateUserBody");
 
 const { UserService } = require("../services");
 
-module.exports = class UserController {
+module.exports = class UserController extends BaseController {
   constructor(userService = new UserService()) {
+    super();
     this.userService = userService;
   }
 
@@ -80,12 +82,5 @@ module.exports = class UserController {
       res.status(500);
       return res.json(this.errorResponse(e.message));
     }
-  }
-
-  errorResponse(message) {
-    return {
-      success: false,
-      message,
-    };
   }
 };

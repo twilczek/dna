@@ -21,6 +21,10 @@ class UserService {
     };
   }
 
+  async findByName(name) {
+    return this.repository.findByName(name);
+  }
+
   async findUser(id) {
     return this.repository.findById(id);
   }
